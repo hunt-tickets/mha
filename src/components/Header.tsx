@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { useScrollEffect } from '@/hooks/useScrollEffect';
 
 const Header: React.FC = () => {
@@ -16,17 +15,14 @@ const Header: React.FC = () => {
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-center items-center">
-          <div className="relative w-32 h-16">
-            <Image
-              src="https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSg4djGcXTKYxbtG0lfPosRc5S2WVq4C1JdFME"
-              alt="Maria Helena Amador Logo"
-              fill
-              className="object-contain filter brightness-0 invert"
-              priority
-              sizes="128px"
-              unoptimized
-            />
-          </div>
+          <img
+            src="https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSg4djGcXTKYxbtG0lfPosRc5S2WVq4C1JdFME"
+            alt="Maria Helena Amador Logo"
+            className={`w-auto object-contain filter brightness-0 invert transition-all duration-300 ease-in-out ${
+              isScrolled ? 'h-16' : 'h-32'
+            }`}
+            loading="eager"
+          />
         </div>
       </div>
     </header>
