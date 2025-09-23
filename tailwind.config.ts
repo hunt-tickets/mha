@@ -9,9 +9,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "#0a0a0a",
+        foreground: "#ffffff",
+        primary: {
+          green: "#00ff00", // Hero banner green placeholder
+        }
       },
+      backdropBlur: {
+        xs: '2px',
+      },
+      screens: {
+        'xs': '375px',
+      }
     },
   },
   plugins: [],
