@@ -16,14 +16,15 @@ const Header: React.FC = () => {
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-center items-center">
-          <div className="relative w-24 h-12">
+          <div className="relative w-32 h-16">
             <Image
               src="https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSg4djGcXTKYxbtG0lfPosRc5S2WVq4C1JdFME"
               alt="Maria Helena Amador Logo"
               fill
-              className="object-contain"
+              className="object-contain filter brightness-0 invert"
               priority
-              sizes="(max-width: 768px) 96px, 96px"
+              sizes="128px"
+              unoptimized
             />
           </div>
         </div>
