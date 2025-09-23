@@ -1,9 +1,9 @@
 'use client';
 
-import { useScrollEffect } from '@/hooks/useScrollEffect';
+import { useButtonsSectionVisibility } from '@/hooks/useButtonsSectionVisibility';
 
 const Header: React.FC = () => {
-  const isScrolled = useScrollEffect(350);
+  const isScrolled = useButtonsSectionVisibility();
 
   return (
     <header
