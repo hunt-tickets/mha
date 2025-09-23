@@ -19,7 +19,7 @@ const Header: React.FC = () => {
             src="https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSg4djGcXTKYxbtG0lfPosRc5S2WVq4C1JdFME"
             alt="Maria Helena Amador Logo"
             className={`w-auto object-contain filter brightness-0 invert transition-all duration-300 ease-in-out ${
-              isScrolled ? 'h-16' : 'h-32'
+              isScrolled ? 'h-12' : 'h-48'
             }`}
             loading="eager"
           />
