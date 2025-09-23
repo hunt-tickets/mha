@@ -183,7 +183,7 @@ const HeroBanner: React.FC = () => {
         document.removeEventListener(event, handleUserInteraction);
       });
     };
-  }, [forcePlay, handleVideoReload, handleUserInteraction, videoState.hasError]);
+  }, [forcePlay, handleVideoReload, handleUserInteraction, updateVideoState, videoState.hasError]);
 
   // Watchdog - check video status every 5 seconds
   useEffect(() => {
@@ -217,7 +217,6 @@ const HeroBanner: React.FC = () => {
         x5-video-player-type="h5"
         x5-video-player-fullscreen="true"
         poster=""
-        defaultMuted
         data-testid="hero-video"
       >
         <source
