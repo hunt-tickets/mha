@@ -205,11 +205,19 @@ const HeroBanner: React.FC = () => {
       {/* Video background */}
       <video
         ref={videoRef}
-        className="absolute inset-0 w-full h-full object-cover transform-none"
+        className="absolute inset-0 w-full h-full object-cover"
         style={{
-          transform: 'none',
-          transformOrigin: 'center center',
-          objectPosition: 'center center'
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100vw',
+          height: '100vh',
+          zIndex: 0,
+          transform: 'none !important',
+          scale: 'none !important',
+          objectFit: 'cover',
+          objectPosition: 'center center',
+          pointerEvents: 'none'
         }}
         autoPlay
         loop
@@ -232,7 +240,7 @@ const HeroBanner: React.FC = () => {
 
       {/* Loading/Error States */}
       {videoState.isLoading && !videoState.isPlaying && (
-        <div className="absolute inset-0 bg-black flex items-center justify-center">
+        <div className="absolute inset-0 bg-black flex items-center justify-center z-40">
           <div className="text-white text-center">
             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white mx-auto mb-2"></div>
             <p className="text-sm">Cargando experiencia...</p>
@@ -241,7 +249,7 @@ const HeroBanner: React.FC = () => {
       )}
 
       {videoState.hasError && (
-        <div className="absolute inset-0 bg-black flex items-center justify-center">
+        <div className="absolute inset-0 bg-black flex items-center justify-center z-40">
           <div className="text-white text-center p-4">
             <p className="mb-4">Reintentando conexión...</p>
             <button
@@ -257,7 +265,7 @@ const HeroBanner: React.FC = () => {
       {/* User interaction prompt - only shows if autoplay fails completely */}
       {!videoState.userInteracted && !videoState.isPlaying && !videoState.isLoading && !videoState.hasError && videoState.retryCount >= MAX_RETRIES && (
         <div
-          className="absolute inset-0 bg-black/50 flex items-center justify-center cursor-pointer z-20"
+          className="absolute inset-0 bg-black/50 flex items-center justify-center cursor-pointer z-30"
           onClick={handleUserInteraction}
         >
           <div className="text-white text-center">
@@ -282,7 +290,7 @@ const HeroBanner: React.FC = () => {
       )}
 
       {/* Content overlay - ready for future content */}
-      <div className="relative z-10 h-full flex items-center justify-center">
+      <div className="relative z-50 h-full flex items-center justify-center">
         {/* Future content can be added here */}
       </div>
     </section>

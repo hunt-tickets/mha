@@ -1,37 +1,4 @@
 const ButtonsSection: React.FC = () => {
-  const getPatternStyle = (pattern: string) => {
-    switch (pattern) {
-      case 'stripes-diagonal-pink':
-        return {
-          backgroundImage: `linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%, transparent 75%, rgba(255,255,255,0.1) 75%), linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%, transparent 75%, rgba(255,255,255,0.1) 75%)`,
-          backgroundSize: '20px 20px',
-          backgroundPosition: '0 0, 10px 10px'
-        };
-      case 'dots-cyan':
-        return {
-          backgroundImage: `radial-gradient(circle, rgba(0,0,0,0.2) 2px, transparent 2px)`,
-          backgroundSize: '15px 15px'
-        };
-      case 'zigzag-yellow':
-        return {
-          backgroundImage: `linear-gradient(45deg, transparent 40%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.1) 60%, transparent 60%), linear-gradient(-45deg, transparent 40%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.1) 60%, transparent 60%)`,
-          backgroundSize: '16px 16px'
-        };
-      case 'grid-green':
-        return {
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.1) 1px, transparent 1px)`,
-          backgroundSize: '12px 12px'
-        };
-      case 'waves-orange':
-        return {
-          backgroundImage: `repeating-linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0.1) 5px, transparent 5px, transparent 10px)`,
-          backgroundSize: '14px 14px'
-        };
-      default:
-        return {};
-    }
-  };
-
   const buttons = [
     {
       id: 'tickets',
@@ -40,8 +7,7 @@ const ButtonsSection: React.FC = () => {
       color: 'bg-gradient-to-br from-pink-500 to-pink-600',
       textColor: 'text-white',
       rotation: 'rotate-2',
-      scale: 'scale-105',
-      pattern: 'stripes-diagonal-pink'
+      scale: 'scale-105'
     },
     {
       id: 'location',
@@ -50,8 +16,7 @@ const ButtonsSection: React.FC = () => {
       color: 'bg-gradient-to-br from-cyan-400 to-cyan-500',
       textColor: 'text-black',
       rotation: '-rotate-1',
-      scale: 'scale-100',
-      pattern: 'dots-cyan'
+      scale: 'scale-100'
     },
     {
       id: 'schedule',
@@ -60,8 +25,7 @@ const ButtonsSection: React.FC = () => {
       color: 'bg-gradient-to-br from-yellow-400 to-yellow-500',
       textColor: 'text-black',
       rotation: 'rotate-3',
-      scale: 'scale-100',
-      pattern: 'zigzag-yellow'
+      scale: 'scale-100'
     },
     {
       id: 'restaurants',
@@ -70,8 +34,7 @@ const ButtonsSection: React.FC = () => {
       color: 'bg-gradient-to-br from-green-400 to-green-500',
       textColor: 'text-black',
       rotation: '-rotate-2',
-      scale: 'scale-100',
-      pattern: 'grid-green'
+      scale: 'scale-100'
     },
     {
       id: 'live',
@@ -80,8 +43,7 @@ const ButtonsSection: React.FC = () => {
       color: 'bg-gradient-to-br from-orange-500 to-red-500',
       textColor: 'text-white',
       rotation: 'rotate-1',
-      scale: 'scale-105',
-      pattern: 'waves-orange'
+      scale: 'scale-105'
     }
   ];
 
@@ -120,7 +82,6 @@ const ButtonsSection: React.FC = () => {
               group overflow-hidden
               active:scale-95 active:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)]
             `}
-            style={getPatternStyle(buttons[0].pattern)}
           >
             <div className="relative z-10 text-center">
               <div className="text-4xl md:text-6xl mb-3">{buttons[0].emoji}</div>
@@ -130,8 +91,8 @@ const ButtonsSection: React.FC = () => {
                 ))}
               </div>
             </div>
-            {/* Pattern overlay */}
-            <div className="absolute inset-0 opacity-30" style={getPatternStyle(buttons[0].pattern)}></div>
+            {/* Brutalist stripe pattern */}
+            <div className="absolute top-0 right-0 w-full h-2 bg-repeating-linear bg-gradient-to-r from-black via-transparent to-black opacity-20"></div>
           </button>
 
           {/* Other buttons */}
@@ -147,7 +108,6 @@ const ButtonsSection: React.FC = () => {
                 group overflow-hidden
                 active:scale-95 active:shadow-[3px_3px_0px_0px_rgba(0,0,0,0.8)]
               `}
-              style={getPatternStyle(button.pattern)}
             >
               <div className="relative z-10 text-center">
                 <div className="text-2xl md:text-3xl mb-2">{button.emoji}</div>
@@ -155,8 +115,6 @@ const ButtonsSection: React.FC = () => {
                   {button.text}
                 </div>
               </div>
-              {/* Pattern overlay */}
-              <div className="absolute inset-0 opacity-25" style={getPatternStyle(button.pattern)}></div>
             </button>
           ))}
 
@@ -172,7 +130,6 @@ const ButtonsSection: React.FC = () => {
               group overflow-hidden
               active:scale-95 active:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)]
             `}
-            style={getPatternStyle(buttons[4].pattern)}
           >
             <div className="relative z-10 flex items-center justify-center gap-4">
               <div className="text-3xl md:text-5xl">{buttons[4].emoji}</div>
@@ -187,8 +144,6 @@ const ButtonsSection: React.FC = () => {
                 <div className="absolute -inset-1 w-6 h-6 bg-white rounded-none animate-ping border-2 border-black opacity-75"></div>
               </div>
             </div>
-            {/* Pattern overlay */}
-            <div className="absolute inset-0 opacity-30" style={getPatternStyle(buttons[4].pattern)}></div>
           </button>
         </div>
 
