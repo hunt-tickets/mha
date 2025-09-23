@@ -205,7 +205,12 @@ const HeroBanner: React.FC = () => {
       {/* Video background */}
       <video
         ref={videoRef}
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover transform-none"
+        style={{
+          transform: 'none',
+          transformOrigin: 'center center',
+          objectPosition: 'center center'
+        }}
         autoPlay
         loop
         muted
