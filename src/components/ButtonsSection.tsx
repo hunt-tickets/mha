@@ -32,7 +32,6 @@ const ButtonsSection: React.FC = () => {
     }
   };
 
-const ButtonsSection: React.FC = () => {
   const buttons = [
     {
       id: 'tickets',
