@@ -11,7 +11,7 @@ const HeroBanner: React.FC = () => {
     isPlaying: false,
     hasError: false,
     isLoading: true,
-    userInteracted: false,
+    userInteracted: true, // Start as if user already interacted for immediate autoplay
     retryCount: 0
   });
 
@@ -33,14 +33,14 @@ const HeroBanner: React.FC = () => {
       }
 
       // Ensure video is ready
-      if (video.readyState < 3) {
+      if (video.readyState < 2) {
         console.log('Video not ready, waiting...');
         return false;
       }
 
       if (video.paused) {
         await video.play();
-        updateVideoState({ isPlaying: true, hasError: false });
+        updateVideoState({ isPlaying: true, hasError: false, userInteracted: true });
         console.log('✅ Video playing successfully');
         return true;
       }
@@ -58,8 +58,9 @@ const HeroBanner: React.FC = () => {
           forcePlay();
         }, PLAY_RETRY_DELAY * retryCountRef.current);
       } else {
-        updateVideoState({ hasError: true });
-        console.log('💀 Max retries reached, giving up');
+        // If autoplay fails completely, show interaction prompt
+        updateVideoState({ hasError: false, userInteracted: false });
+        console.log('🎯 Autoplay blocked, showing interaction prompt');
       }
       return false;
     }
@@ -70,7 +71,7 @@ const HeroBanner: React.FC = () => {
     if (!video) return;
 
     console.log('🔄 Reloading video...');
-    updateVideoState({ isLoading: true, hasError: false });
+    updateVideoState({ isLoading: true, hasError: false, userInteracted: true, retryCount: 0 });
     retryCountRef.current = 0;
 
     video.load();
@@ -88,9 +89,10 @@ const HeroBanner: React.FC = () => {
     if (!video) return;
 
     const handleLoadedData = () => {
-      console.log('📹 Video loaded, attempting autoplay');
+      console.log('📹 Video loaded, attempting immediate autoplay');
       updateVideoState({ isLoading: false });
-      forcePlay();
+      // Try to play immediately
+      setTimeout(() => forcePlay(), 100);
     };
 
     const handleCanPlayThrough = () => {
@@ -110,7 +112,7 @@ const HeroBanner: React.FC = () => {
 
       // Auto-resume after a short delay
       setTimeout(() => {
-        if (video && video.paused && !videoState.hasError) {
+        if (video && video.paused) {
           forcePlay();
         }
       }, 500);
@@ -215,6 +217,8 @@ const HeroBanner: React.FC = () => {
         x5-video-player-type="h5"
         x5-video-player-fullscreen="true"
         poster=""
+        defaultMuted
+        data-testid="hero-video"
       >
         <source
           src="https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSou3pojhe1kMVwIlP3d5rmDpRf0Aa72b8JzhX"
@@ -246,8 +250,8 @@ const HeroBanner: React.FC = () => {
         </div>
       )}
 
-      {/* User interaction prompt */}
-      {!videoState.userInteracted && !videoState.isPlaying && !videoState.isLoading && (
+      {/* User interaction prompt - only shows if autoplay fails completely */}
+      {!videoState.userInteracted && !videoState.isPlaying && !videoState.isLoading && !videoState.hasError && videoState.retryCount >= MAX_RETRIES && (
         <div
           className="absolute inset-0 bg-black/50 flex items-center justify-center cursor-pointer z-20"
           onClick={handleUserInteraction}
