@@ -3,7 +3,7 @@
 import { useScrollEffect } from '@/hooks/useScrollEffect';
 
 const Header: React.FC = () => {
-  const isScrolled = useScrollEffect(50);
+  const isScrolled = useScrollEffect(350);
 
   return (
     <header
