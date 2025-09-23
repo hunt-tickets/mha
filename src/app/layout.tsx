@@ -5,7 +5,7 @@ import MobileOnly from "@/components/MobileOnly";
 export const metadata: Metadata = {
   title: "Evento Maria Helena Amador - Gimnasio Moderno",
   description: "Experiencia móvil del evento Maria Helena Amador en el Gimnasio Moderno de Bogotá",
-  viewport: "width=device-width, initial-scale=1",
+  viewport: "width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no",
   themeColor: "#0a0a0a",
 };
 

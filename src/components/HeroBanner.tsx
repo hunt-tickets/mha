@@ -69,7 +69,7 @@ const HeroBanner: React.FC = () => {
   const videoUrl = `https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSou3pojhe1kMVwIlP3d5rmDpRf0Aa72b8JzhX?v=${Date.now()}`;
 
   return (
-    <section className="w-full h-screen relative overflow-hidden">
+    <section className="w-full h-screen-safe relative overflow-hidden">
       {/* Video background */}
       <video
         ref={videoRef}
