@@ -9,7 +9,7 @@ const StripCarousel: React.FC = () => {
         {[...Array(6)].map((_, index) => (
           <div
             key={index}
-            className="flex-shrink-0 w-screen h-16 md:h-20"
+            className="flex-shrink-0 w-screen h-32 md:h-40"
             style={{ minWidth: '100vw' }}
           >
             <img
