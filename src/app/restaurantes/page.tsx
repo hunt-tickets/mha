@@ -209,33 +209,33 @@ const RestaurantesPage: React.FC = () => {
         <div className="space-y-6 mb-8">
           {foodStands.map((stand, standIndex) => {
             const colors = [
-              'bg-gradient-to-br from-pink-500/20 to-pink-600/20 border-pink-400/30',
-              'bg-gradient-to-br from-blue-500/20 to-blue-600/20 border-blue-400/30',
-              'bg-gradient-to-br from-green-500/20 to-green-600/20 border-green-400/30',
-              'bg-gradient-to-br from-orange-500/20 to-orange-600/20 border-orange-400/30',
-              'bg-gradient-to-br from-purple-500/20 to-purple-600/20 border-purple-400/30',
-              'bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 border-yellow-400/30',
-              'bg-gradient-to-br from-red-500/20 to-red-600/20 border-red-400/30',
-              'bg-gradient-to-br from-cyan-500/20 to-cyan-600/20 border-cyan-400/30',
-              'bg-gradient-to-br from-indigo-500/20 to-indigo-600/20 border-indigo-400/30',
-              'bg-gradient-to-br from-teal-500/20 to-teal-600/20 border-teal-400/30',
-              'bg-gradient-to-br from-lime-500/20 to-lime-600/20 border-lime-400/30',
-              'bg-gradient-to-br from-emerald-500/20 to-emerald-600/20 border-emerald-400/30',
-              'bg-gradient-to-br from-rose-500/20 to-rose-600/20 border-rose-400/30'
+              'bg-gradient-to-br from-pink-500 to-pink-600',
+              'bg-gradient-to-br from-cyan-400 to-cyan-500',
+              'bg-gradient-to-br from-yellow-400 to-yellow-500',
+              'bg-gradient-to-br from-green-400 to-green-500',
+              'bg-gradient-to-br from-orange-500 to-red-500',
+              'bg-gradient-to-br from-purple-500 to-purple-600',
+              'bg-gradient-to-br from-blue-500 to-blue-600',
+              'bg-gradient-to-br from-red-500 to-red-600',
+              'bg-gradient-to-br from-indigo-500 to-indigo-600',
+              'bg-gradient-to-br from-teal-400 to-teal-500',
+              'bg-gradient-to-br from-lime-400 to-lime-500',
+              'bg-gradient-to-br from-emerald-500 to-emerald-600',
+              'bg-gradient-to-br from-rose-500 to-rose-600'
             ];
             const colorClass = colors[standIndex % colors.length];
 
             return (
-              <div key={stand.id} className={`${colorClass} border-2 p-5 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300`}>
+              <div key={stand.id} className={`${colorClass} border-4 border-black p-6 rounded-none shadow-[8px_8px_0px_0px_rgba(0,0,0,0.8)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,0.8)] transition-all duration-300 transform hover:brightness-110`}>
                 <div className="flex items-center mb-4">
-                  <div className="bg-white/90 rounded-full p-2 mr-4 shadow-md">
+                  <div className="bg-white border-2 border-black rounded-none p-2 mr-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)]">
                     <span className="text-3xl">{stand.emoji}</span>
                   </div>
-                  <h3 className="text-xl font-black text-white drop-shadow-lg">{stand.name}</h3>
+                  <h3 className="text-xl font-black text-white">{stand.name}</h3>
                 </div>
                 <div className="space-y-2">
                   {stand.items.map((item, index) => (
-                    <p key={index} className="text-white text-sm leading-relaxed bg-black/20 px-3 py-1 rounded-md">
+                    <p key={index} className="text-white text-sm leading-relaxed bg-black/30 px-3 py-2 border-2 border-black/50 rounded-none">
                       • {item}
                     </p>
                   ))}
@@ -246,16 +246,16 @@ const RestaurantesPage: React.FC = () => {
         </div>
 
         {/* Beverages section */}
-        <div className="bg-gradient-to-br from-blue-500/20 to-cyan-600/20 border-2 border-blue-400/30 p-5 rounded-lg shadow-lg">
+        <div className="bg-gradient-to-br from-blue-500 to-cyan-500 border-4 border-black p-6 rounded-none shadow-[8px_8px_0px_0px_rgba(0,0,0,0.8)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,0.8)] transition-all duration-300 transform hover:brightness-110">
           <div className="flex items-center mb-4">
-            <div className="bg-white/90 rounded-full p-2 mr-4 shadow-md">
+            <div className="bg-white border-2 border-black rounded-none p-2 mr-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)]">
               <span className="text-3xl">🥤</span>
             </div>
-            <h3 className="text-xl font-black text-white drop-shadow-lg">Bebidas</h3>
+            <h3 className="text-xl font-black text-white">Bebidas</h3>
           </div>
           <div className="space-y-2">
             {beverages.map((beverage, index) => (
-              <p key={index} className="text-white text-sm leading-relaxed bg-black/20 px-3 py-1 rounded-md">
+              <p key={index} className="text-white text-sm leading-relaxed bg-black/30 px-3 py-2 border-2 border-black/50 rounded-none">
                 • {beverage}
               </p>
             ))}
