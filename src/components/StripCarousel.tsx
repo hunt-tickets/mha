@@ -15,7 +15,7 @@ const StripCarousel: React.FC = () => {
             <img
               src="https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSj2jJMutQcabRiPf7NYCdWtl8gh1TSy5nZA6s"
               alt={`Strip ${index + 1}`}
-              className="w-full h-full object-cover object-center"
+              className="w-full h-full object-contain object-center"
               loading="lazy"
             />
           </div>
