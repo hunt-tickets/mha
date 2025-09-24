@@ -102,6 +102,11 @@ const ButtonsSection: React.FC = () => {
           {buttons.slice(1, 4).map((button) => (
             <button
               key={button.id}
+              onClick={() => {
+                if (button.id === 'schedule') {
+                  window.location.href = '/horarios';
+                }
+              }}
               className={`
                 ${button.color} ${button.rotation}
                 relative p-4 md:p-6 rounded-none
