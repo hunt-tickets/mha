@@ -6,13 +6,13 @@ const StripCarousel: React.FC = () => {
       {/* Infinite scrolling container */}
       <div className="flex animate-scroll">
         {/* Create multiple copies for seamless loop */}
-        {Array.from({ length: 8 }, (_, i) => (
+        {Array.from({ length: 3 }, (_, i) => (
           <img
             key={i}
             src="https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSj2jJMutQcabRiPf7NYCdWtl8gh1TSy5nZA6s"
             alt={`Strip ${i + 1}`}
             className="h-40 flex-shrink-0 object-contain"
-            style={{ width: '100vw' }}
+            style={{ width: 'auto', minWidth: '100vw' }}
           />
         ))}
       </div>
