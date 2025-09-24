@@ -72,6 +72,7 @@ const ButtonsSection: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
           {/* Main tickets button - spans 2 columns */}
           <button
+            onClick={() => window.open('https://www.hunt-tickets.com/events/fe9e909d-a6e7-4647-a7ab-f947042332b6', '_blank')}
             className={`
               ${buttons[0].color} ${buttons[0].rotation}
               col-span-2 md:col-span-1 md:row-span-2
