@@ -105,6 +105,8 @@ const ButtonsSection: React.FC = () => {
               onClick={() => {
                 if (button.id === 'schedule') {
                   window.location.href = '/horarios';
+                } else if (button.id === 'location') {
+                  window.location.href = '/ubicacion';
                 }
               }}
               className={`
