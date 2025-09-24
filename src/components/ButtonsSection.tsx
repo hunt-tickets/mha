@@ -79,11 +79,11 @@ const ButtonsSection: React.FC = () => {
               ${buttons[0].color} ${buttons[0].rotation}
               col-span-2 md:col-span-1 md:row-span-2
               relative p-6 md:p-8 rounded-none
-              transform transition-all duration-300 hover:scale-110 hover:rotate-0 hover:-translate-y-2
+              transform transition-all duration-300 hover:brightness-125 hover:rotate-0 hover:-translate-y-2
               shadow-[8px_8px_0px_0px_rgba(0,0,0,0.8)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,0.8)]
               border-4 border-black
               group overflow-hidden
-              active:scale-95 active:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)]
+              active:brightness-90 active:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)]
             `}
           >
             <div className="relative z-10 text-center">
@@ -105,11 +105,11 @@ const ButtonsSection: React.FC = () => {
               className={`
                 ${button.color} ${button.rotation}
                 relative p-4 md:p-6 rounded-none
-                transform transition-all duration-300 hover:scale-110 hover:rotate-0 hover:-translate-y-2
+                transform transition-all duration-300 hover:brightness-125 hover:rotate-0 hover:-translate-y-2
                 shadow-[6px_6px_0px_0px_rgba(0,0,0,0.8)] hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,0.8)]
                 border-3 border-black
                 group overflow-hidden
-                active:scale-95 active:shadow-[3px_3px_0px_0px_rgba(0,0,0,0.8)]
+                active:brightness-90 active:shadow-[3px_3px_0px_0px_rgba(0,0,0,0.8)]
               `}
             >
               <div className="relative z-10 text-center">
@@ -127,11 +127,11 @@ const ButtonsSection: React.FC = () => {
               ${buttons[4].color} ${buttons[4].rotation}
               col-span-2
               relative p-6 md:p-8 rounded-none
-              transform transition-all duration-300 hover:scale-110 hover:rotate-0 hover:-translate-y-2
+              transform transition-all duration-300 hover:brightness-125 hover:rotate-0 hover:-translate-y-2
               shadow-[8px_8px_0px_0px_rgba(0,0,0,0.8)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,0.8)]
               border-4 border-black
               group overflow-hidden
-              active:scale-95 active:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)]
+              active:brightness-90 active:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)]
             `}
           >
             <div className="relative z-10 flex items-center justify-center gap-4">

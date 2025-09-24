@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import HeroBanner from "@/components/HeroBanner";
 import ButtonsSection from "@/components/ButtonsSection";
+import StripCarousel from "@/components/StripCarousel";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Header />
       <HeroBanner />
       <ButtonsSection />
+      <StripCarousel />
 
       {/* Future content sections will be added here */}
     </div>
