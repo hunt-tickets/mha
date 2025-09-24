@@ -2,7 +2,7 @@
 
 const StripCarousel: React.FC = () => {
   return (
-    <div className="relative w-full overflow-hidden py-6">
+    <div className="relative w-full overflow-hidden">
       {/* Infinite scrolling container */}
       <div className="flex animate-scroll">
         {/* Create multiple copies for seamless loop */}
