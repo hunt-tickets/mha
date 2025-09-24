@@ -107,6 +107,8 @@ const ButtonsSection: React.FC = () => {
                   window.location.href = '/horarios';
                 } else if (button.id === 'location') {
                   window.location.href = '/ubicacion';
+                } else if (button.id === 'restaurants') {
+                  window.location.href = '/restaurantes';
                 }
               }}
               className={`
