@@ -11,7 +11,7 @@ const StripCarousel: React.FC = () => {
             key={i}
             src="https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSj2jJMutQcabRiPf7NYCdWtl8gh1TSy5nZA6s"
             alt={`Strip ${i + 1}`}
-            className="h-40 flex-shrink-0 object-cover"
+            className="h-40 flex-shrink-0 object-contain"
             style={{ width: '100vw' }}
           />
         ))}
