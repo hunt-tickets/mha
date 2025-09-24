@@ -1,3 +1,5 @@
+'use client';
+
 const ButtonsSection: React.FC = () => {
   const buttons = [
     {
