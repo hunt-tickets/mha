@@ -207,32 +207,55 @@ const RestaurantesPage: React.FC = () => {
 
         {/* Food stands */}
         <div className="space-y-6 mb-8">
-          {foodStands.map((stand) => (
-            <div key={stand.id} className="bg-white/5 border border-white/10 p-4 rounded-none">
-              <div className="flex items-center mb-3">
-                <span className="text-2xl mr-3">{stand.emoji}</span>
-                <h3 className="text-lg font-bold text-white">{stand.name}</h3>
+          {foodStands.map((stand, standIndex) => {
+            const colors = [
+              'bg-gradient-to-br from-pink-500/20 to-pink-600/20 border-pink-400/30',
+              'bg-gradient-to-br from-blue-500/20 to-blue-600/20 border-blue-400/30',
+              'bg-gradient-to-br from-green-500/20 to-green-600/20 border-green-400/30',
+              'bg-gradient-to-br from-orange-500/20 to-orange-600/20 border-orange-400/30',
+              'bg-gradient-to-br from-purple-500/20 to-purple-600/20 border-purple-400/30',
+              'bg-gradient-to-br from-yellow-500/20 to-yellow-600/20 border-yellow-400/30',
+              'bg-gradient-to-br from-red-500/20 to-red-600/20 border-red-400/30',
+              'bg-gradient-to-br from-cyan-500/20 to-cyan-600/20 border-cyan-400/30',
+              'bg-gradient-to-br from-indigo-500/20 to-indigo-600/20 border-indigo-400/30',
+              'bg-gradient-to-br from-teal-500/20 to-teal-600/20 border-teal-400/30',
+              'bg-gradient-to-br from-lime-500/20 to-lime-600/20 border-lime-400/30',
+              'bg-gradient-to-br from-emerald-500/20 to-emerald-600/20 border-emerald-400/30',
+              'bg-gradient-to-br from-rose-500/20 to-rose-600/20 border-rose-400/30'
+            ];
+            const colorClass = colors[standIndex % colors.length];
+
+            return (
+              <div key={stand.id} className={`${colorClass} border-2 p-5 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300`}>
+                <div className="flex items-center mb-4">
+                  <div className="bg-white/90 rounded-full p-2 mr-4 shadow-md">
+                    <span className="text-3xl">{stand.emoji}</span>
+                  </div>
+                  <h3 className="text-xl font-black text-white drop-shadow-lg">{stand.name}</h3>
+                </div>
+                <div className="space-y-2">
+                  {stand.items.map((item, index) => (
+                    <p key={index} className="text-white text-sm leading-relaxed bg-black/20 px-3 py-1 rounded-md">
+                      • {item}
+                    </p>
+                  ))}
+                </div>
               </div>
-              <div className="space-y-1">
-                {stand.items.map((item, index) => (
-                  <p key={index} className="text-white/80 text-sm leading-relaxed">
-                    • {item}
-                  </p>
-                ))}
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Beverages section */}
-        <div className="bg-white/5 border border-white/10 p-4 rounded-none">
-          <div className="flex items-center mb-3">
-            <span className="text-2xl mr-3">🥤</span>
-            <h3 className="text-lg font-bold text-white">Bebidas</h3>
+        <div className="bg-gradient-to-br from-blue-500/20 to-cyan-600/20 border-2 border-blue-400/30 p-5 rounded-lg shadow-lg">
+          <div className="flex items-center mb-4">
+            <div className="bg-white/90 rounded-full p-2 mr-4 shadow-md">
+              <span className="text-3xl">🥤</span>
+            </div>
+            <h3 className="text-xl font-black text-white drop-shadow-lg">Bebidas</h3>
           </div>
-          <div className="space-y-1">
+          <div className="space-y-2">
             {beverages.map((beverage, index) => (
-              <p key={index} className="text-white/80 text-sm leading-relaxed">
+              <p key={index} className="text-white text-sm leading-relaxed bg-black/20 px-3 py-1 rounded-md">
                 • {beverage}
               </p>
             ))}
