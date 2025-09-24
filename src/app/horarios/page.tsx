@@ -5,15 +5,36 @@ import { useRouter } from 'next/navigation';
 const HorariosPage: React.FC = () => {
   const router = useRouter();
 
-  const images = [
-    'https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSQuC81SFgEQz3dAsX0yjfHk1PnY9aCWOhqlvD',
-    'https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSkxHe7FZnj4Pd9QZFbCroOAeq3svV5BTElW2H',
-    'https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSzGBUZLQFQO3H87VzW2exMadhsD0G4Rt1nocI',
-    'https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSjXPyEltQcabRiPf7NYCdWtl8gh1TSy5nZA6s'
+  const schedules = [
+    {
+      src: 'https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSQuC81SFgEQz3dAsX0yjfHk1PnY9aCWOhqlvD',
+      day: 'Día 1',
+      date: 'Lunes'
+    },
+    {
+      src: 'https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSkxHe7FZnj4Pd9QZFbCroOAeq3svV5BTElW2H',
+      day: 'Día 2',
+      date: 'Martes'
+    },
+    {
+      src: 'https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSzGBUZLQFQO3H87VzW2exMadhsD0G4Rt1nocI',
+      day: 'Día 3',
+      date: 'Miércoles'
+    },
+    {
+      src: 'https://8qdflvbxjc.ufs.sh/f/Uou7Uf8rkNCSjXPyEltQcabRiPf7NYCdWtl8gh1TSy5nZA6s',
+      day: 'Día 4',
+      date: 'Jueves'
+    }
   ];
 
   const handleBack = () => {
     router.push('/');
+  };
+
+  const handleViewDay = (schedule: { day: string; date: string; src: string }) => {
+    // Open image in new tab for detailed view
+    window.open(schedule.src, '_blank');
   };
 
   return (
@@ -44,14 +65,24 @@ const HorariosPage: React.FC = () => {
 
       {/* Images container */}
       <div className="pb-6">
-        {images.map((src, index) => (
-          <div key={index} className="w-full">
+        {schedules.map((schedule, index) => (
+          <div key={index} className="relative w-full mb-4">
             <img
-              src={src}
-              alt={`Horario ${index + 1}`}
+              src={schedule.src}
+              alt={`Horario ${schedule.day} - ${schedule.date}`}
               className="w-full h-auto block"
               loading={index === 0 ? 'eager' : 'lazy'}
             />
+
+            {/* Day button overlay */}
+            <div className="absolute bottom-4 right-4">
+              <button
+                onClick={() => handleViewDay(schedule)}
+                className="bg-gradient-to-br from-pink-500 to-pink-600 text-white font-black px-4 py-2 rounded-none border-2 border-black hover:brightness-125 transition-all duration-300 active:brightness-90 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,0.8)]"
+              >
+                📅 Ver {schedule.day}
+              </button>
+            </div>
           </div>
         ))}
       </div>
