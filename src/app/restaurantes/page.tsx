@@ -13,7 +13,7 @@ const RestaurantesPage: React.FC = () => {
     {
       id: 1,
       emoji: '🥭',
-      name: 'Mangos',
+      name: 'Mister Mango',
       items: [
         'Mango biche: $8.000',
         'Vaso pequeño: $7.000'
@@ -22,7 +22,7 @@ const RestaurantesPage: React.FC = () => {
     {
       id: 2,
       emoji: '🍧',
-      name: 'Raspados',
+      name: 'Raspados Hawaianos',
       items: [
         'Grande: $12.000',
         'Mediano: $10.000',
@@ -32,7 +32,7 @@ const RestaurantesPage: React.FC = () => {
     {
       id: 3,
       emoji: '🍟',
-      name: 'Papas',
+      name: 'Papas Belgas',
       items: [
         'Berlinesa: $29.000',
         'Tocineta: $26.000',
@@ -42,7 +42,7 @@ const RestaurantesPage: React.FC = () => {
     {
       id: 4,
       emoji: '🍩',
-      name: 'Churros',
+      name: 'SK Churrería',
       items: [
         'Porción (7 unidades): $11.000'
       ]
@@ -50,7 +50,7 @@ const RestaurantesPage: React.FC = () => {
     {
       id: 5,
       emoji: '🌭',
-      name: 'Salchichas',
+      name: 'Salchichas Alemanas',
       items: [
         'Papas chip: $5.000',
         'Combo salchicha + papitas: $25.000',
@@ -60,7 +60,7 @@ const RestaurantesPage: React.FC = () => {
     {
       id: 6,
       emoji: '🍬',
-      name: 'Dulces y Juguetes',
+      name: 'Benitoys',
       items: [
         'Dulces: $3.000 – $55.000 (variedad de presentaciones)'
       ]
@@ -68,7 +68,7 @@ const RestaurantesPage: React.FC = () => {
     {
       id: 7,
       emoji: '🍭',
-      name: 'Algoareps (algodón de azúcar)',
+      name: 'Algo Areps',
       items: [
         'Algodón unicolor (1 sabor): $8.000',
         'Algodón arcoiris (3 sabores): $10.000',
@@ -78,7 +78,7 @@ const RestaurantesPage: React.FC = () => {
     {
       id: 8,
       emoji: '🍣',
-      name: 'Sushi',
+      name: 'Sushi Izakaya',
       items: [
         'Philadelphia: 10 bocados $30.000 / 6 bocados $20.000',
         'California: 10 bocados $30.000 / 6 bocados $20.000',
@@ -98,7 +98,7 @@ const RestaurantesPage: React.FC = () => {
     {
       id: 9,
       emoji: '🥞',
-      name: 'Creperie',
+      name: 'Petite Creperie',
       items: [
         'Especial: $25.000',
         'Niza: $20.000',
@@ -116,7 +116,7 @@ const RestaurantesPage: React.FC = () => {
     {
       id: 10,
       emoji: '🌮',
-      name: 'Nachos',
+      name: 'Nachos-Santos & sus Ignacio\'s',
       items: [
         'Nachos 1 acompañamiento: $16.000',
         'Nachos 3 acompañamientos: $20.000',
@@ -128,7 +128,7 @@ const RestaurantesPage: React.FC = () => {
     {
       id: 11,
       emoji: '🍕',
-      name: 'Pizzas',
+      name: 'Piazzola',
       items: [
         'Pizza: $12.000'
       ]
@@ -154,7 +154,7 @@ const RestaurantesPage: React.FC = () => {
     {
       id: 13,
       emoji: '🍔',
-      name: 'Hamburguesas',
+      name: 'Hamburguesa SOS',
       items: [
         'Hamburguesa Full: $25.000',
         'Hamburguesa con papas: $28.000'
@@ -251,7 +251,7 @@ const RestaurantesPage: React.FC = () => {
             <div className="bg-white border-2 border-black rounded-none p-2 mr-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)]">
               <span className="text-3xl">🥤</span>
             </div>
-            <h3 className="text-xl font-black text-white">Bebidas</h3>
+            <h3 className="text-xl font-black text-white">Gaseosas Comité CC-CD</h3>
           </div>
           <div className="space-y-2">
             {beverages.map((beverage, index) => (
