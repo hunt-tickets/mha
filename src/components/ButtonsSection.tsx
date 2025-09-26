@@ -37,15 +37,6 @@ const ButtonsSection: React.FC = () => {
       textColor: 'text-black',
       rotation: '-rotate-2',
       scale: 'scale-100'
-    },
-    {
-      id: 'live',
-      text: 'VER EN\nVIVO',
-      emoji: '📺',
-      color: 'bg-gradient-to-br from-orange-500 to-red-500',
-      textColor: 'text-white',
-      rotation: 'rotate-1',
-      scale: 'scale-105'
     }
   ];
 
@@ -99,7 +90,7 @@ const ButtonsSection: React.FC = () => {
           </button>
 
           {/* Other buttons */}
-          {buttons.slice(1, 4).map((button) => (
+          {buttons.slice(1).map((button) => (
             <button
               key={button.id}
               onClick={() => {
@@ -129,34 +120,6 @@ const ButtonsSection: React.FC = () => {
               </div>
             </button>
           ))}
-
-          {/* Live button - spans 2 columns */}
-          <button
-            className={`
-              ${buttons[4].color} ${buttons[4].rotation}
-              col-span-2
-              relative p-6 md:p-8 rounded-none
-              transform transition-all duration-300 hover:brightness-125
-              shadow-[8px_8px_0px_0px_rgba(0,0,0,0.8)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,0.8)]
-              border-4 border-black
-              group overflow-hidden
-              active:brightness-90 active:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)]
-            `}
-          >
-            <div className="relative z-10 flex items-center justify-center gap-4">
-              <div className="text-3xl md:text-5xl">{buttons[4].emoji}</div>
-              <div className={`text-lg md:text-2xl font-black ${buttons[4].textColor} tracking-wider`}>
-                {buttons[4].text.split('\n').map((line, i) => (
-                  <div key={i}>{line}</div>
-                ))}
-              </div>
-              {/* Pulse indicator */}
-              <div className="relative">
-                <div className="w-4 h-4 bg-white rounded-none animate-pulse border-2 border-black"></div>
-                <div className="absolute -inset-1 w-6 h-6 bg-white rounded-none animate-ping border-2 border-black opacity-75"></div>
-              </div>
-            </div>
-          </button>
         </div>
 
         {/* Brutalist decorative elements */}

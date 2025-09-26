@@ -78,7 +78,7 @@ const HorariosPage: React.FC = () => {
             <div className="absolute bottom-4 right-4">
               <button
                 onClick={() => handleViewDay(schedule)}
-                className="bg-white text-black font-black px-6 py-3 text-lg rounded-none border-3 border-black hover:bg-gray-100 transition-all duration-500 ease-in-out hover:animate-bounce shadow-[6px_6px_0px_0px_rgba(0,0,0,0.8)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,0.8)]"
+                className="bg-white text-black font-black px-6 py-3 text-lg rounded-none border-3 border-black hover:bg-gray-100 transition-all duration-500 ease-in-out animate-bounce shadow-[6px_6px_0px_0px_rgba(0,0,0,0.8)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,0.8)]"
               >
                 📅 Ver {schedule.day}
               </button>
