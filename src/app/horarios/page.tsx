@@ -33,8 +33,13 @@ const HorariosPage: React.FC = () => {
   };
 
   const handleViewDay = (schedule: { day: string; date: string; src: string }) => {
-    // Open image in new tab for detailed view
-    window.open(schedule.src, '_blank');
+    // Navigate to detailed day page if available, otherwise open image
+    if (schedule.day === 'Día 1') {
+      router.push('/horarios/dia-1');
+    } else {
+      // Open image in new tab for other days
+      window.open(schedule.src, '_blank');
+    }
   };
 
   return (
