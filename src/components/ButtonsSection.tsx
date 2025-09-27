@@ -137,7 +137,7 @@ const ButtonsSection: React.FC = () => {
         <div className="absolute -top-4 -left-4 w-8 h-8 bg-pink-500 rounded-none rotate-12 opacity-70 animate-bounce border-2 border-black" style={{ animationDelay: '0s' }}></div>
         <div className="absolute top-1/4 -right-2 w-6 h-6 bg-cyan-400 rotate-45 opacity-70 animate-bounce border-2 border-black" style={{ animationDelay: '1s' }}></div>
         <div className="absolute bottom-1/4 -left-2 w-4 h-8 bg-yellow-400 rounded-none rotate-12 opacity-70 animate-bounce border-2 border-black" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute -bottom-2 right-1/4 w-6 h-6 bg-green-400 rounded-none rotate-45 opacity-70 animate-bounce border-2 border-black" style={{ animationDelay: '0.5s' }}></div>
+        <div className="absolute -bottom-8 right-1/4 w-6 h-6 bg-green-400 rounded-none rotate-45 opacity-70 animate-bounce border-2 border-black" style={{ animationDelay: '0.5s' }}></div>
 
         {/* Additional brutalist shapes */}
         <div className="absolute top-1/2 left-0 w-3 h-12 bg-orange-500 rounded-none opacity-50 border-2 border-black"></div>
