@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import DesktopMessage from './DesktopMessage';
-import AppWrapper from './AppWrapper';
 
 interface MobileOnlyProps {
   children: React.ReactNode;
@@ -43,7 +42,7 @@ const MobileOnly: React.FC<MobileOnlyProps> = ({ children }) => {
   }
 
   // Show mobile content
-  return <AppWrapper>{children}</AppWrapper>;
+  return <>{children}</>;
 };
 
 export default MobileOnly;
