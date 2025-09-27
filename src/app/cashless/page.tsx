@@ -50,6 +50,14 @@ const CashlessPage: React.FC = () => {
           <p className="text-white/80 text-sm">Sistema de pago sin efectivo para el evento</p>
         </div>
 
+        {/* Botón sitio web */}
+        <button
+          onClick={openCashlessWebsite}
+          className="w-full bg-gradient-to-br from-orange-500 to-red-500 text-white font-black py-6 px-6 text-lg rounded-none border-4 border-black transition-all duration-300 hover:brightness-125 shadow-[8px_8px_0px_0px_rgba(0,0,0,0.8)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,0.8)] active:brightness-90 active:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)] mb-8"
+        >
+          🌐 VISITAR SITIO WEB CASHLESS
+        </button>
+
         {/* Information sections */}
         <div className="space-y-6 mb-8">
           {/* Puntos de recarga */}
@@ -151,14 +159,6 @@ const CashlessPage: React.FC = () => {
             </div>
           </div>
         </div>
-
-        {/* Botón sitio web */}
-        <button
-          onClick={openCashlessWebsite}
-          className="w-full bg-gradient-to-br from-orange-500 to-red-500 text-white font-black py-6 px-6 text-lg rounded-none border-4 border-black transition-all duration-300 hover:brightness-125 shadow-[8px_8px_0px_0px_rgba(0,0,0,0.8)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,0.8)] active:brightness-90 active:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)] mb-8"
-        >
-          🌐 VISITAR SITIO WEB CASHLESS
-        </button>
 
         {/* Support section */}
         <div className="space-y-6">
