@@ -10,9 +10,7 @@ const UbicacionPage: React.FC = () => {
   };
 
   const openGoogleMaps = () => {
-    const address = 'Carrera 11 # 74-55, Chapinero, Bogotá, Colombia';
-    const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
-    window.open(url, '_blank');
+    window.open('https://maps.app.goo.gl/1mgpjtLkip8sqq4A7?g_st=ic', '_blank');
   };
 
   return (
@@ -51,6 +49,14 @@ const UbicacionPage: React.FC = () => {
           </h1>
           <p className="text-white/80 text-sm">Colegio Gimnasio Moderno</p>
         </div>
+
+        {/* Google Maps Button */}
+        <button
+          onClick={openGoogleMaps}
+          className="w-full bg-gradient-to-br from-orange-500 to-red-500 text-white font-black py-6 px-6 text-lg rounded-none border-4 border-black transition-all duration-300 hover:brightness-125 shadow-[8px_8px_0px_0px_rgba(0,0,0,0.8)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,0.8)] active:brightness-90 active:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)] mb-8"
+        >
+          📍 ABRIR EN GOOGLE MAPS
+        </button>
 
         {/* Information sections */}
         <div className="space-y-6 mb-8">
@@ -177,14 +183,6 @@ const UbicacionPage: React.FC = () => {
             </div>
           </div>
         </div>
-
-        {/* Google Maps Button */}
-        <button
-          onClick={openGoogleMaps}
-          className="w-full bg-gradient-to-br from-orange-500 to-red-500 text-white font-black py-6 px-6 text-lg rounded-none border-4 border-black transition-all duration-300 hover:brightness-125 shadow-[8px_8px_0px_0px_rgba(0,0,0,0.8)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,0.8)] active:brightness-90 active:shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)] mb-8"
-        >
-          📍 ABRIR EN GOOGLE MAPS
-        </button>
 
         {/* Support section */}
         <div className="space-y-6">
