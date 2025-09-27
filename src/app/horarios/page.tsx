@@ -38,6 +38,10 @@ const HorariosPage: React.FC = () => {
       router.push('/horarios/dia-1');
     } else if (schedule.day === 'Día 2') {
       router.push('/horarios/dia-2');
+    } else if (schedule.day === 'Día 3') {
+      router.push('/horarios/dia-3');
+    } else if (schedule.day === 'Día 4') {
+      router.push('/horarios/dia-4');
     } else {
       // Open image in new tab for other days
       window.open(schedule.src, '_blank');
