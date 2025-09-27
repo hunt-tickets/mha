@@ -81,26 +81,6 @@ const UbicacionPage: React.FC = () => {
             </div>
           </div>
 
-          {/* Contact */}
-          <div className="bg-gradient-to-br from-green-400 to-green-500 border-4 border-black p-6 rounded-none shadow-[8px_8px_0px_0px_rgba(0,0,0,0.8)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,0.8)] transition-all duration-300 transform hover:brightness-110">
-            <div className="flex items-center mb-4">
-              <div className="bg-white border-2 border-black rounded-none p-2 mr-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)]">
-                <span className="text-3xl">📞</span>
-              </div>
-              <h3 className="text-xl font-black text-black">Contacto</h3>
-            </div>
-            <div className="space-y-2">
-              <p className="text-black text-sm leading-relaxed bg-black/30 px-3 py-2 border-2 border-black/50 rounded-none">
-                • Teléfono: +57 (1) 312-0008
-              </p>
-              <p className="text-black text-sm leading-relaxed bg-black/30 px-3 py-2 border-2 border-black/50 rounded-none">
-                • Email: eventos@gimnasimoderno.edu.co
-              </p>
-              <p className="text-black text-sm leading-relaxed bg-black/30 px-3 py-2 border-2 border-black/50 rounded-none">
-                • WhatsApp: +57 300 123 4567
-              </p>
-            </div>
-          </div>
 
           {/* Access hours */}
           <div className="bg-gradient-to-br from-yellow-400 to-yellow-500 border-4 border-black p-6 rounded-none shadow-[8px_8px_0px_0px_rgba(0,0,0,0.8)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,0.8)] transition-all duration-300 transform hover:brightness-110">

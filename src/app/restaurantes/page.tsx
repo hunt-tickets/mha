@@ -12,61 +12,6 @@ const RestaurantesPage: React.FC = () => {
   const foodStands = [
     {
       id: 1,
-      emoji: '🥭',
-      name: 'Mister Mango',
-      items: [
-        'Mango biche: $8.000',
-        'Vaso pequeño: $7.000'
-      ]
-    },
-    {
-      id: 2,
-      emoji: '🍧',
-      name: 'Raspados Hawaianos',
-      items: [
-        'Grande: $12.000',
-        'Mediano: $10.000',
-        'Pequeño: $8.000'
-      ]
-    },
-    {
-      id: 3,
-      emoji: '🍟',
-      name: 'Papas Belgas',
-      items: [
-        'Berlinesa: $29.000',
-        'Tocineta: $26.000',
-        'Vegetariana: $22.000'
-      ]
-    },
-    {
-      id: 4,
-      emoji: '🍩',
-      name: 'SK Churrería',
-      items: [
-        'Porción (7 unidades): $11.000'
-      ]
-    },
-    {
-      id: 5,
-      emoji: '🌭',
-      name: 'Salchichas Alemanas',
-      items: [
-        'Papas chip: $5.000',
-        'Combo salchicha + papitas: $25.000',
-        'Pan baguette (mostaza dijon, curry, sauerkraut, mayonesa): $22.000'
-      ]
-    },
-    {
-      id: 6,
-      emoji: '🍬',
-      name: 'Benitoys',
-      items: [
-        'Dulces: $3.000 – $55.000 (variedad de presentaciones)'
-      ]
-    },
-    {
-      id: 7,
       emoji: '🍭',
       name: 'Algo Areps',
       items: [
@@ -76,27 +21,55 @@ const RestaurantesPage: React.FC = () => {
       ]
     },
     {
-      id: 8,
-      emoji: '🍣',
-      name: 'Sushi Izakaya',
+      id: 2,
+      emoji: '🍬',
+      name: 'Benitoys',
       items: [
-        'Philadelphia: 10 bocados $30.000 / 6 bocados $20.000',
-        'California: 10 bocados $30.000 / 6 bocados $20.000',
-        'Viggi Roll: 10 bocados $30.000 / 6 bocados $20.000',
-        'Q\' Tropical: 10 bocados $30.000 / 6 bocados $20.000',
-        'Ojo de Tigre: 10 bocados $30.000 / 6 bocados $20.000',
-        'Salmon Skin: 10 bocados $30.000 / 6 bocados $20.000',
-        'Salmon Tempura: 10 bocados $30.000 / 6 bocados $20.000',
-        'Kappamaki: 10 bocados $30.000 / 6 bocados $20.000',
-        'Sake Tempura: 10 bocados $34.000 / 6 bocados $22.000',
-        'Tempura KO: 10 bocados $34.000 / 6 bocados $22.000',
-        'Langostino Dinamita: 10 bocados $34.000 / 6 bocados $22.000',
-        'Arroz de pollo, res y cerdo: $36.000',
-        'Arroz de camarón: $40.000'
+        'Dulces: $3.000 – $55.000 (variedad de presentaciones)'
       ]
     },
     {
-      id: 9,
+      id: 3,
+      emoji: '🍔',
+      name: 'Hamburguesa SOS',
+      items: [
+        'Hamburguesa Full: $25.000',
+        'Hamburguesa con papas: $28.000'
+      ]
+    },
+    {
+      id: 4,
+      emoji: '🥭',
+      name: 'Mister Mango',
+      items: [
+        'Mango biche: $8.000',
+        'Vaso pequeño: $7.000'
+      ]
+    },
+    {
+      id: 5,
+      emoji: '🌮',
+      name: 'Nachos-Santos & sus Ignacio\'s',
+      items: [
+        'Nachos 1 acompañamiento: $16.000',
+        'Nachos 3 acompañamientos: $20.000',
+        'Combo Nachos vegetarianos: $22.000',
+        'Combo Nachos full carne: $24.000',
+        'Dorilocos: $17.000'
+      ]
+    },
+    {
+      id: 6,
+      emoji: '🍟',
+      name: 'Papas Belgas',
+      items: [
+        'Berlinesa: $29.000',
+        'Tocineta: $26.000',
+        'Vegetariana: $22.000'
+      ]
+    },
+    {
+      id: 7,
       emoji: '🥞',
       name: 'Petite Creperie',
       items: [
@@ -114,19 +87,7 @@ const RestaurantesPage: React.FC = () => {
       ]
     },
     {
-      id: 10,
-      emoji: '🌮',
-      name: 'Nachos-Santos & sus Ignacio\'s',
-      items: [
-        'Nachos 1 acompañamiento: $16.000',
-        'Nachos 3 acompañamientos: $20.000',
-        'Combo Nachos vegetarianos: $22.000',
-        'Combo Nachos full carne: $24.000',
-        'Dorilocos: $17.000'
-      ]
-    },
-    {
-      id: 11,
+      id: 8,
       emoji: '🍕',
       name: 'Piazzola',
       items: [
@@ -134,7 +95,7 @@ const RestaurantesPage: React.FC = () => {
       ]
     },
     {
-      id: 12,
+      id: 9,
       emoji: '🧋',
       name: 'POFFI',
       items: [
@@ -152,12 +113,51 @@ const RestaurantesPage: React.FC = () => {
       ]
     },
     {
-      id: 13,
-      emoji: '🍔',
-      name: 'Hamburguesa SOS',
+      id: 10,
+      emoji: '🍧',
+      name: 'Raspados Hawaianos',
       items: [
-        'Hamburguesa Full: $25.000',
-        'Hamburguesa con papas: $28.000'
+        'Grande: $12.000',
+        'Mediano: $10.000',
+        'Pequeño: $8.000'
+      ]
+    },
+    {
+      id: 11,
+      emoji: '🌭',
+      name: 'Salchichas Alemanas',
+      items: [
+        'Papas chip: $5.000',
+        'Combo salchicha + papitas: $25.000',
+        'Pan baguette (mostaza dijon, curry, sauerkraut, mayonesa): $22.000'
+      ]
+    },
+    {
+      id: 12,
+      emoji: '🍩',
+      name: 'SK Churrería',
+      items: [
+        'Porción (7 unidades): $11.000'
+      ]
+    },
+    {
+      id: 13,
+      emoji: '🍣',
+      name: 'Sushi Izakaya',
+      items: [
+        'Philadelphia: 10 bocados $30.000 / 6 bocados $20.000',
+        'California: 10 bocados $30.000 / 6 bocados $20.000',
+        'Viggi Roll: 10 bocados $30.000 / 6 bocados $20.000',
+        'Q\' Tropical: 10 bocados $30.000 / 6 bocados $20.000',
+        'Ojo de Tigre: 10 bocados $30.000 / 6 bocados $20.000',
+        'Salmon Skin: 10 bocados $30.000 / 6 bocados $20.000',
+        'Salmon Tempura: 10 bocados $30.000 / 6 bocados $20.000',
+        'Kappamaki: 10 bocados $30.000 / 6 bocados $20.000',
+        'Sake Tempura: 10 bocados $34.000 / 6 bocados $22.000',
+        'Tempura KO: 10 bocados $34.000 / 6 bocados $22.000',
+        'Langostino Dinamita: 10 bocados $34.000 / 6 bocados $22.000',
+        'Arroz de pollo, res y cerdo: $36.000',
+        'Arroz de camarón: $40.000'
       ]
     }
   ];
