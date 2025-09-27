@@ -36,6 +36,8 @@ const HorariosPage: React.FC = () => {
     // Navigate to detailed day page if available, otherwise open image
     if (schedule.day === 'Día 1') {
       router.push('/horarios/dia-1');
+    } else if (schedule.day === 'Día 2') {
+      router.push('/horarios/dia-2');
     } else {
       // Open image in new tab for other days
       window.open(schedule.src, '_blank');

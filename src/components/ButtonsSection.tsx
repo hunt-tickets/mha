@@ -37,6 +37,15 @@ const ButtonsSection: React.FC = () => {
       textColor: 'text-black',
       rotation: '-rotate-2',
       scale: 'scale-100'
+    },
+    {
+      id: 'cashless',
+      text: 'CASHLESS',
+      emoji: '💳',
+      color: 'bg-gradient-to-br from-orange-500 to-red-500',
+      textColor: 'text-white',
+      rotation: 'rotate-1',
+      scale: 'scale-100'
     }
   ];
 
@@ -100,6 +109,8 @@ const ButtonsSection: React.FC = () => {
                   window.location.href = '/ubicacion';
                 } else if (button.id === 'restaurants') {
                   window.location.href = '/restaurantes';
+                } else if (button.id === 'cashless') {
+                  window.location.href = '/cashless';
                 }
               }}
               className={`
