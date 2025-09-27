@@ -159,7 +159,14 @@ const Dia1Page: React.FC = () => {
       <div className="px-6 py-8 pb-20">
         {/* Title */}
         <div className="mb-8 text-center">
-          <div className="text-4xl mb-4">📅</div>
+          <div className="mb-4 flex justify-center">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="white">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6" stroke="white" strokeWidth="2"/>
+              <line x1="8" y1="2" x2="8" y2="6" stroke="white" strokeWidth="2"/>
+              <line x1="3" y1="10" x2="21" y2="10" stroke="white" strokeWidth="2"/>
+            </svg>
+          </div>
           <h1 className="text-2xl md:text-3xl font-black text-white mb-4 tracking-tight">
             DÍA 1 - LUNES
           </h1>
@@ -187,8 +194,11 @@ const Dia1Page: React.FC = () => {
                 <h3 className={`text-lg font-black ${getTextColor(item.actividad)}`}>
                   {item.actividad}
                 </h3>
-                <p className={`text-sm ${getTextColor(item.actividad)} bg-black/30 px-3 py-2 border-2 border-black/50 rounded-none`}>
-                  📍 {item.lugar}
+                <p className={`text-sm ${getTextColor(item.actividad)} bg-black/30 px-3 py-2 border-2 border-black/50 rounded-none flex items-center`}>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="mr-2">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                  </svg>
+                  {item.lugar}
                 </p>
               </div>
             </div>

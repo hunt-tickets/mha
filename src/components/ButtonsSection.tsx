@@ -5,7 +5,12 @@ const ButtonsSection: React.FC = () => {
     {
       id: 'tickets',
       text: 'COMPRAR\nTICKETS',
-      emoji: '🎫',
+      icon: (
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M22 10V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v4a2 2 0 0 1 0 4v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 1 0-4z"/>
+          <path d="M13 5v14" stroke="white" strokeWidth="2"/>
+        </svg>
+      ),
       color: 'bg-gradient-to-br from-pink-500 to-pink-600',
       textColor: 'text-white',
       rotation: 'rotate-2',
@@ -14,7 +19,11 @@ const ButtonsSection: React.FC = () => {
     {
       id: 'location',
       text: 'UBICACIÓN',
-      emoji: '📍',
+      icon: (
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+        </svg>
+      ),
       color: 'bg-gradient-to-br from-cyan-400 to-cyan-500',
       textColor: 'text-black',
       rotation: '-rotate-1',
@@ -23,7 +32,12 @@ const ButtonsSection: React.FC = () => {
     {
       id: 'schedule',
       text: 'HORARIOS',
-      emoji: '🕐',
+      icon: (
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="12,6 12,12 16,14" stroke="white" strokeWidth="2" fill="none"/>
+        </svg>
+      ),
       color: 'bg-gradient-to-br from-yellow-400 to-yellow-500',
       textColor: 'text-black',
       rotation: 'rotate-3',
@@ -32,7 +46,11 @@ const ButtonsSection: React.FC = () => {
     {
       id: 'restaurants',
       text: 'RESTAURANTES',
-      emoji: '🍽️',
+      icon: (
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M8.1 13.34l2.83-2.83L3.91 3.5c-1.56 1.56-1.56 4.09 0 5.66l4.19 4.18zm6.78-1.81c1.53.71 3.68.21 5.27-1.38 1.91-1.91 2.28-4.65.81-6.12-1.46-1.46-4.2-1.1-6.12.81-1.59 1.59-2.09 3.74-1.38 5.27L3.7 19.87l1.41 1.41L12 14.41l6.88 6.88 1.41-1.41L13.41 13l1.47-1.47z"/>
+        </svg>
+      ),
       color: 'bg-gradient-to-br from-green-400 to-green-500',
       textColor: 'text-black',
       rotation: '-rotate-2',
@@ -41,7 +59,13 @@ const ButtonsSection: React.FC = () => {
     {
       id: 'cashless',
       text: 'CASHLESS',
-      emoji: '💳',
+      icon: (
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+          <rect x="2" y="6" width="20" height="12" rx="2"/>
+          <circle cx="12" cy="12" r="2"/>
+          <path d="M6 12h.01M18 12h.01"/>
+        </svg>
+      ),
       color: 'bg-gradient-to-br from-orange-500 to-red-500',
       textColor: 'text-white',
       rotation: 'rotate-1',
@@ -87,7 +111,7 @@ const ButtonsSection: React.FC = () => {
             `}
           >
             <div className="relative z-10 text-center">
-              <div className="text-4xl md:text-6xl mb-3">{buttons[0].emoji}</div>
+              <div className="mb-3 flex justify-center">{buttons[0].icon}</div>
               <div className={`text-lg md:text-xl font-black ${buttons[0].textColor} tracking-wider leading-tight`}>
                 {buttons[0].text.split('\n').map((line, i) => (
                   <div key={i}>{line}</div>
@@ -124,7 +148,7 @@ const ButtonsSection: React.FC = () => {
               `}
             >
               <div className="relative z-10 text-center">
-                <div className="text-2xl md:text-3xl mb-2">{button.emoji}</div>
+                <div className="mb-2 flex justify-center">{button.icon}</div>
                 <div className={`text-sm md:text-base font-black ${button.textColor} tracking-wide`}>
                   {button.text}
                 </div>
