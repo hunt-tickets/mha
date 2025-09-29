@@ -165,7 +165,7 @@ const RestaurantesPage: React.FC = () => {
   const beverages = [
     'Agua: $4.000',
     'Gaseosas (Coca cola, Kola Roman, Cuatro, Sprite, Colombiana, Manzana): $5.000',
-    'Gatorade: $5.000'
+    'Electrolit: $10.000'
   ];
 
   return (
